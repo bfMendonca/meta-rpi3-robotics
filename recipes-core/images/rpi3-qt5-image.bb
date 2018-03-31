@@ -1,4 +1,4 @@
-#Baseia a imagem na imagem rpi-basic-image.bb
+#Baseia a imagem na imagem rpi-hwup-image.bb
 include recipes-core/images/rpi-hwup-image.bb
 
 LICENSE = "GPLv2"
@@ -19,6 +19,10 @@ IMAGE_INSTALL_append += " \
     fontconfig-dev \
     fontconfig-utils \
     ttf-bitstream-vera \
+		\
+		openssh \
+		openssh-sftp \
+		openssh-sftp-server \
 	"
 
 inherit populate_sdk_qt5
